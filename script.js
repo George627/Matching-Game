@@ -22,7 +22,7 @@ cards.forEach(clickableCards);
 reset.addEventListener("click", function () {
     const one = () => {console.log(1)};
     
-    setTimeout(one,5000);
+    const eight = setTimeout(one, 10000);
 
   
     cards.forEach(resetGame);
