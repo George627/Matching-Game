@@ -106,6 +106,7 @@ function colorPlacement(newColors){
 //The resetGame functions flips all the cards over to their back side.
 function resetGame(card){
     card.classList.remove("flip");
+    card.classList.remove("matched");
 }
 
 function match(compare){
