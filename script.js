@@ -41,7 +41,7 @@ reset.addEventListener("click", function () {
 
 //The clickableCards function takes the current card then incorporate the flip function to it. 
 function clickableCards(card){
-  card.addEventListener("click", flip)};
+  card.addEventListener("click", flip);
 }
 
 //The flip function takes a card and will either add or remove the flip class.
