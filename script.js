@@ -113,7 +113,7 @@ function resetGame(card){
 }
 
 function match(compare){
-    if(compare[0].childNodes[3].style.backgroundColor === compare[2].childNodes[3].style.backgroundColor){
+    if(compare[0].childNodes[3].style.backgroundColor === compare[1].childNodes[3].style.backgroundColor){
         compare[0].classList.add("matched");
         compare[1].classList.add("matched");
         compare.length = 0;
