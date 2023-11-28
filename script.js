@@ -50,10 +50,6 @@ function flip() {
     //Grabs the current card.
     let flip = this;
   
-    compare.push(flip);
-    
-    console.log(compare.length);
-  
     //If the current card does NOT contain the flip class, then add it.
     if(!flip.classList.contains("flip")){
 
@@ -113,17 +109,21 @@ function resetGame(card){
 }
 
 function match(compare){
-    if(compare[0].childNodes[3].style.backgroundColor === compare[1].childNodes[3].style.backgroundColor){
+    const firstColor = compare[0].childNodes[3].style.backgroundColor;
+
+    const secondColor = compare[1].childNodes[3].style.backgroundColor;
+  
+    if(firstColor === secondColor){
         compare[0].classList.add("matched");
         compare[1].classList.add("matched");
-        compare.length = 0;
     }
 
     else{
         compare[0].classList.remove("flip");
-        compare[1].classList.remove("flip");
-        compare.length = 0;
+        compare[1].classList.remove("flip");   
     }
-
+    
+    compare.length = 0;
+    
     return compare;
 }
