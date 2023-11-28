@@ -41,21 +41,19 @@ reset.addEventListener("click", function () {
 
 //The clickableCards function takes the current card then incorporate the flip function to it. 
 function clickableCards(card){
-   
-  
-  card.addEventListener("click", function(){
-    compare.push(this);
-    console.log(compare.length);
-    flip)};
+  card.addEventListener("click", flip)};
 }
-
 
 //The flip function takes a card and will either add or remove the flip class.
 function flip() {
 
     //Grabs the current card.
-    let flip = this;  
-
+    let flip = this;
+  
+    compare.push(flip);
+    
+    console.log(compare.length);
+  
     //If the current card does NOT contain the flip class, then add it.
     if(!flip.classList.contains("flip")){
 
