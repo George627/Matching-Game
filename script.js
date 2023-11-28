@@ -42,10 +42,11 @@ reset.addEventListener("click", function () {
 //The clickableCards function takes the current card then incorporate the flip function to it. 
 function clickableCards(card){
    
-  compare.push(this);
-
-  console.log(compare.length);
-  card.addEventListener("click", flip);
+  
+  card.addEventListener("click", funcction(){
+    compare.push(this);
+    console.log(compare.length);
+    flip)};
 }
 
 
