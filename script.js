@@ -59,6 +59,13 @@ function flip() {
 
         //Adds the flip class to the current card.
         flip.classList.add("flip");
+        
+        compare.push(flip);
+        
+        if(compare.length === 2){
+          match(compare);
+        }
+        
     }
 
     //Else, remove the flip class.
@@ -103,4 +110,20 @@ function colorPlacement(newColors){
 //The resetGame functions flips all the cards over to their back side.
 function resetGame(card){
     card.classList.remove("flip");
+}
+
+function match(compare){
+    if(compare[0].childNodes[3].style.backgroundColor === compare[2].childNodes[3].style.backgroundColor){
+        compare[0].classList.add("matched");
+        compare[1].classList.add("matched");
+        compare.length = 0;
+    }
+
+    else{
+        compare[0].classList.remove("flip");
+        compare[1].classList.remove("flip");
+        compare.length = 0;
+    }
+
+    return compare;
 }
