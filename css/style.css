@@ -15,7 +15,6 @@ button{
 }
 
 .container{
-    position: absolute;
     left: 130px;
     display: grid;
     height: 100vh;

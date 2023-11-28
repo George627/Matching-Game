@@ -27,17 +27,20 @@ cards.forEach(clickableCards);
 If clicked, (1) then it will reset the game by flipping all the cards over,
 (2) then shuffle the colors for each card. */
 reset.addEventListener("click", function () {
+    
     //1
-    cards.forEach(resetGame);
+    cards.forEach(resetGame)
 
     //2 
-    colorShuffle(shuffle(colors));
+    const delayShuffle = setTimeout('colorShuffle(shuffle(colors))', 500);
+
 })
 
 //The clickableCards function takes the current card then incorporate the flip function to it. 
 function clickableCards(card){
    card.addEventListener("click", flip);
 }
+
 
 //The flip function takes a card and will either add or remove the flip class.
 function flip() {
