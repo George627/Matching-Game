@@ -43,7 +43,7 @@ reset.addEventListener("click", function () {
 function clickableCards(card){
    
   
-  card.addEventListener("click", funcction(){
+  card.addEventListener("click", function(){
     compare.push(this);
     console.log(compare.length);
     flip)};
