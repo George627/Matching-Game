@@ -64,11 +64,6 @@ function flip() {
         
     }
 
-    //Else, remove the flip class.
-    else{
-        flip.classList.remove("flip");
-    }
-
 }
 
 //The colorShuffle function takes in the array of colors, then shuffles it.
