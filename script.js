@@ -15,6 +15,9 @@ const colors = ["red", "red",
                 "purple", "purple",
                 "green", "green"];
 
+//Array that compares object. 
+const compare = [];
+
 //The method that shuffles the colors.
 colorPlacement(colorShuffle(colors));
 
@@ -38,7 +41,11 @@ reset.addEventListener("click", function () {
 
 //The clickableCards function takes the current card then incorporate the flip function to it. 
 function clickableCards(card){
-   card.addEventListener("click", flip);
+   
+  compare.push(this);
+
+  console.log(compare.length);
+  card.addEventListener("click", flip);
 }
 
 
