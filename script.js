@@ -16,7 +16,7 @@ const colors = ["red", "red",
                 "green", "green"];
 
 //The method that shuffles the colors.
-colorShuffle(shuffle(colors));
+colorPlacement(colorShuffle(colors));
 
 /*A forEach method that takes all the card elements 
 and applies the clickable function to each of them.*/
@@ -32,7 +32,7 @@ reset.addEventListener("click", function () {
     cards.forEach(resetGame)
 
     //2 
-    const delayShuffle = setTimeout('colorShuffle(shuffle(colors))', 500);
+    const delayShuffle = setTimeout('colorPlacement(colorShuffle(colors))', 500);
 
 })
 
@@ -62,8 +62,8 @@ function flip() {
 
 }
 
-//The shuffle function takes in the array of colors, then shuffles it.
-function shuffle(color) {
+//The colorShuffle function takes in the array of colors, then shuffles it.
+function colorShuffle(color) {
     let currentIndex = color.length,  randomIndex;
     
     // While there remain elements to shuffle.
@@ -82,9 +82,9 @@ function shuffle(color) {
     return color;
 }
 
-/*The colorShuffle function takes in array of colors 
+/*The colorPlacement function takes in array of colors 
 and places them on the inner side of the card.*/
-function colorShuffle(newColors){
+function colorPlacement(newColors){
     let shuffColors = newColors;
 
     /*Using a for loop to loop through all inner cards
