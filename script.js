@@ -59,7 +59,7 @@ function flip() {
         compare.push(flip);
         
         if(compare.length === 2){
-          setTimeout('match(compare)', 1000);
+          setTimeout('match(compare)', 600);
         }
         
     }
